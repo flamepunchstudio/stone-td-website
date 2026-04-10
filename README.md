@@ -125,10 +125,10 @@ git push
 
 ## 📞 문의
 
-- **Developer**: Flamepunch Studio
+- **Developer**: FlamePunch Studio
 - **Email**: support@flamepunch.com
 - **Game**: Stone TD (Castle Defense + Roguelite)
 
 ---
 
-© 2026 Flamepunch Studio. All rights reserved.
+© 2026 FlamePunch Studio. All rights reserved.

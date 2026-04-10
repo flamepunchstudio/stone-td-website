@@ -1,19 +1,121 @@
 /* ============================================================
    Stone TD 공식 웹사이트 스타일
-   모바일 반응형, 다크 테마, 한국어 + 영어 병행
+   모바일 반응형, 다크 테마, 한국어/영어 토글 지원
    ============================================================ */
 
+/* ─────────── 다국어 전환 (lang.js 제어) ─────────── */
+/* 기본: show-ko 클래스가 없으면 ko 표시 (초기 로딩 시 FOUC 방지) */
+[data-lang="en"] {
+  display: none;
+}
+[data-lang="ko"] {
+  display: initial;
+}
+
+/* show-en 상태 */
+body.show-en [data-lang="ko"] {
+  display: none !important;
+}
+body.show-en [data-lang="en"] {
+  display: initial;
+}
+
+/* show-ko 상태 (명시적) */
+body.show-ko [data-lang="en"] {
+  display: none !important;
+}
+body.show-ko [data-lang="ko"] {
+  display: initial;
+}
+
+/* block 요소용 (section, div, p, li 등) */
+body.show-en section[data-lang="ko"],
+body.show-en div[data-lang="ko"],
+body.show-en p[data-lang="ko"],
+body.show-en li[data-lang="ko"],
+body.show-en h1[data-lang="ko"],
+body.show-en h2[data-lang="ko"],
+body.show-en h3[data-lang="ko"],
+body.show-en ul[data-lang="ko"] {
+  display: none !important;
+}
+body.show-en section[data-lang="en"],
+body.show-en div[data-lang="en"],
+body.show-en p[data-lang="en"],
+body.show-en li[data-lang="en"],
+body.show-en h1[data-lang="en"],
+body.show-en h2[data-lang="en"],
+body.show-en h3[data-lang="en"],
+body.show-en ul[data-lang="en"] {
+  display: block;
+}
+
+body.show-ko section[data-lang="en"],
+body.show-ko div[data-lang="en"],
+body.show-ko p[data-lang="en"],
+body.show-ko li[data-lang="en"],
+body.show-ko h1[data-lang="en"],
+body.show-ko h2[data-lang="en"],
+body.show-ko h3[data-lang="en"],
+body.show-ko ul[data-lang="en"] {
+  display: none !important;
+}
+body.show-ko section[data-lang="ko"],
+body.show-ko div[data-lang="ko"],
+body.show-ko p[data-lang="ko"],
+body.show-ko li[data-lang="ko"],
+body.show-ko h1[data-lang="ko"],
+body.show-ko h2[data-lang="ko"],
+body.show-ko h3[data-lang="ko"],
+body.show-ko ul[data-lang="ko"] {
+  display: block;
+}
+
+/* 언어 전환 버튼 */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  margin-left: 8px;
+}
+
+.lang-switch:hover {
+  background: var(--accent);
+  color: #fff5e6;
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(255, 69, 0, 0.4);
+}
+
+.lang-switch:active {
+  transform: scale(0.96);
+}
+
+
+
 :root {
-  --bg-primary: #0f0f14;
-  --bg-secondary: #1a1a22;
-  --bg-card: #22222c;
-  --border: #2f2f3a;
-  --text-primary: #f5f5f7;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
-  --accent: #f59e0b;
-  --accent-hover: #fbbf24;
-  --danger: #ef4444;
+  /* Fire 테마 — Stone TD 아이콘 기반 */
+  --bg-primary: #080000;           /* 깊은 흑적색 */
+  --bg-secondary: #180505;         /* 어두운 버건디 */
+  --bg-card: #241010;              /* 카드 배경 (약간 밝음) */
+  --border: #4a1515;               /* 어두운 적색 테두리 */
+  --text-primary: #fff5e6;         /* 따뜻한 크림 (본문 흰색) */
+  --text-secondary: #d4a574;       /* 따뜻한 금색/탄 */
+  --text-muted: #8b5a2b;           /* 어두운 갈색 */
+  --accent: #ff4500;               /* 불꽃 주황-빨강 (메인 강조) */
+  --accent-hover: #ff6b35;         /* 밝은 불꽃 */
+  --accent-gold: #ffb800;          /* 따뜻한 금색 (보조 강조) */
+  --accent-dark: #8b1a00;          /* 진한 적색 */
+  --danger: #dc2626;
   --success: #10b981;
   --max-width: 880px;
   --radius: 12px;
@@ -79,14 +181,17 @@ header {
 }
 
 .logo-icon {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--accent), #d97706);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 0 14px rgba(255, 69, 0, 0.45), 0 0 4px rgba(255, 184, 0, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.logo:hover .logo-icon {
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.7), 0 0 8px rgba(255, 184, 0, 0.5);
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -121,10 +226,18 @@ header {
   font-size: clamp(36px, 8vw, 56px);
   font-weight: 800;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #f5f5f7 0%, var(--accent) 100%);
+  background: linear-gradient(
+    135deg,
+    #fff5e6 0%,
+    var(--accent-gold) 35%,
+    var(--accent) 70%,
+    var(--accent-dark) 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 40px rgba(255, 69, 0, 0.3);
+  filter: drop-shadow(0 0 20px rgba(255, 69, 0, 0.2));
 }
 
 .hero .tagline {
@@ -193,6 +306,7 @@ section {
 .feature-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(255, 69, 0, 0.15), 0 0 0 1px rgba(255, 69, 0, 0.3);
 }
 
 .feature-card .emoji {
@@ -226,18 +340,21 @@ section {
   align-items: center;
   gap: 10px;
   padding: 14px 28px;
-  background: var(--accent);
-  color: #0f0f14;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  color: #fff5e6;
   border-radius: var(--radius);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(255, 69, 0, 0.3);
+  border: 1px solid rgba(255, 184, 0, 0.2);
 }
 
 .btn:hover {
-  background: var(--accent-hover);
+  background: linear-gradient(135deg, var(--accent-hover) 0%, var(--accent) 100%);
   transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(255, 69, 0, 0.5);
 }
 
 .btn-secondary {

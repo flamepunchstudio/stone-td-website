@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stone TD — 캐슬 디펜스 로그라이트 모바일 게임</title>
+  <title>Stone TD — 타워 디펜스 로그라이트 모바일 게임</title>
   <meta
     name="description"
-    content="Stone TD는 성을 지키는 캐슬 디펜스 + 로그라이트 모바일 게임입니다. 16명의 영웅과 끝없는 웨이브에 맞서보세요."
+    content="Stone TD는 성을 지키는 타워 디펜스 + 로그라이트 모바일 게임입니다. 16명의 영웅과 끝없는 웨이브에 맞서보세요."
   />
-  <meta name="author" content="Flamepunch Studio" />
+  <meta name="author" content="FlamePunch Studio" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Stone TD" />
   <meta
     property="og:description"
-    content="캐슬 디펜스 + 로그라이트 모바일 게임 — Flamepunch Studio"
+    content="타워 디펜스 + 로그라이트 모바일 게임 — FlamePunch Studio"
   />
   <meta property="og:type" content="website" />
   <meta
@@ -25,20 +25,43 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="show-ko">
   <!-- ─────────── 헤더 ─────────── -->
   <header>
     <div class="container">
       <nav class="nav">
         <a href="index.html" class="logo">
-          <div class="logo-icon">⚔️</div>
+          <img src="Stone_TD_Icon.png" alt="Stone TD" class="logo-icon" />
           <span>Stone TD</span>
         </a>
         <ul class="nav-links">
-          <li><a href="#features">기능</a></li>
-          <li><a href="#download">다운로드</a></li>
-          <li><a href="privacy.html">개인정보처리방침</a></li>
-          <li><a href="terms.html">이용약관</a></li>
+          <li>
+            <a href="#features">
+              <span data-lang="ko">기능</span>
+              <span data-lang="en">Features</span>
+            </a>
+          </li>
+          <li>
+            <a href="#download">
+              <span data-lang="ko">다운로드</span>
+              <span data-lang="en">Download</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy.html">
+              <span data-lang="ko">개인정보처리방침</span>
+              <span data-lang="en">Privacy</span>
+            </a>
+          </li>
+          <li>
+            <a href="terms.html">
+              <span data-lang="ko">이용약관</span>
+              <span data-lang="en">Terms</span>
+            </a>
+          </li>
+          <li>
+            <button class="lang-switch" type="button">🌐 English</button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -48,15 +71,29 @@
   <section class="hero">
     <div class="container">
       <h1>Stone TD</h1>
-      <p class="tagline">
+      <p class="tagline" data-lang="ko">
         끝없는 웨이브로부터 성을 지켜라.<br />
         16명의 영웅, 전략적 덱 빌딩, 로그라이트의 짜릿함.
       </p>
+      <p class="tagline" data-lang="en">
+        Defend your castle from endless waves.<br />
+        16 unique heroes, strategic deck building, roguelite thrills.
+      </p>
       <div class="hero-badges">
-        <span class="badge">🏰 캐슬 디펜스</span>
-        <span class="badge">🎲 로그라이트</span>
-        <span class="badge">📱 모바일</span>
-        <span class="badge">🇰🇷 한국어 지원</span>
+        <span class="badge">
+          <span data-lang="ko">🏰 타워 디펜스</span>
+          <span data-lang="en">🏰 Tower Defense</span>
+        </span>
+        <span class="badge">
+          <span data-lang="ko">🎲 로그라이트</span>
+          <span data-lang="en">🎲 Roguelite</span>
+        </span>
+        <span class="badge">
+          <span data-lang="ko">📱 모바일</span>
+          <span data-lang="en">📱 Mobile</span>
+        </span>
+        <span class="badge">🇰🇷 한국어</span>
+        <span class="badge">🇺🇸 English</span>
       </div>
     </div>
   </section>
@@ -64,12 +101,22 @@
   <!-- ─────────── About ─────────── -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">게임 소개</h2>
-      <p class="section-subtitle">
-        Stone TD는 <strong>Flamepunch Studio</strong>에서 개발한 모바일 캐슬
+      <h2 class="section-title">
+        <span data-lang="ko">게임 소개</span>
+        <span data-lang="en">About Stone TD</span>
+      </h2>
+      <p class="section-subtitle" data-lang="ko">
+        Stone TD는 <strong>FlamePunch Studio</strong>에서 개발한 모바일 타워
         디펜스 + 로그라이트 게임입니다.<br />
         매 런마다 새로운 버프 조합으로 성을 방어하며, 다양한 영웅과 덱 구성으로
         끝없는 웨이브에 도전하세요.
+      </p>
+      <p class="section-subtitle" data-lang="en">
+        Stone TD is a mobile tower defense + roguelite game developed by
+        <strong>FlamePunch Studio</strong>.<br />
+        Defend your castle with fresh buff combinations every run, and
+        challenge endless waves with diverse heroes and strategic deck
+        building.
       </p>
     </div>
   </section>
@@ -77,54 +124,99 @@
   <!-- ─────────── Features ─────────── -->
   <section id="features">
     <div class="container">
-      <h2 class="section-title">핵심 기능</h2>
+      <h2 class="section-title">
+        <span data-lang="ko">핵심 기능</span>
+        <span data-lang="en">Core Features</span>
+      </h2>
       <div class="features">
         <div class="feature-card">
           <div class="emoji">⚔️</div>
-          <h3>16명의 영웅</h3>
-          <p>
+          <h3>
+            <span data-lang="ko">16명의 영웅</span>
+            <span data-lang="en">16 Unique Heroes</span>
+          </h3>
+          <p data-lang="ko">
             궁수, 마법사, 기사 등 각자의 고유 스킬과 패시브를 가진 16명의 영웅.
             나만의 덱을 만들어보세요.
+          </p>
+          <p data-lang="en">
+            Archers, mages, knights, and more — 16 heroes each with unique
+            skills and passives. Build your own deck.
           </p>
         </div>
         <div class="feature-card">
           <div class="emoji">🎲</div>
-          <h3>로그라이트 버프</h3>
-          <p>
+          <h3>
+            <span data-lang="ko">로그라이트 버프</span>
+            <span data-lang="en">Roguelite Buffs</span>
+          </h3>
+          <p data-lang="ko">
             매 웨이브마다 3개의 버프 중 선택. 매 런이 다른 경험을 선사하는
             전략적 재미.
+          </p>
+          <p data-lang="en">
+            Choose 1 of 3 buffs every wave. Each run offers a fresh strategic
+            experience.
           </p>
         </div>
         <div class="feature-card">
           <div class="emoji">⭐</div>
-          <h3>각성 시스템</h3>
-          <p>
+          <h3>
+            <span data-lang="ko">각성 시스템</span>
+            <span data-lang="en">Awakening System</span>
+          </h3>
+          <p data-lang="ko">
             영웅의 증명을 모아 별성을 올리는 엔드게임 콘텐츠. W70 이상부터 도전
             가능.
+          </p>
+          <p data-lang="en">
+            Collect Hero's Proof to upgrade star levels — endgame content
+            unlocked from Wave 70 and beyond.
           </p>
         </div>
         <div class="feature-card">
           <div class="emoji">🌐</div>
-          <h3>크로스 디바이스</h3>
-          <p>
+          <h3>
+            <span data-lang="ko">크로스 디바이스</span>
+            <span data-lang="en">Cross-Device Sync</span>
+          </h3>
+          <p data-lang="ko">
             Google 로그인으로 여러 기기에서 동일한 계정으로 플레이. 진행 상황이
             자동 동기화됩니다.
+          </p>
+          <p data-lang="en">
+            Play across multiple devices with one account via Google Sign-In.
+            Your progress syncs automatically.
           </p>
         </div>
         <div class="feature-card">
           <div class="emoji">🏆</div>
-          <h3>글로벌 리더보드</h3>
-          <p>
+          <h3>
+            <span data-lang="ko">글로벌 리더보드</span>
+            <span data-lang="en">Global Leaderboard</span>
+          </h3>
+          <p data-lang="ko">
             전 세계 플레이어와 최고 웨이브 기록을 겨루세요. 주간 / 전체 순위
             지원.
+          </p>
+          <p data-lang="en">
+            Compete with players worldwide for top wave records. Weekly and
+            all-time rankings supported.
           </p>
         </div>
         <div class="feature-card">
           <div class="emoji">🎨</div>
-          <h3>4개 스테이지 테마</h3>
-          <p>
-            Forest, Autumn, DeepForest, Desert — 웨이브가 올라갈수록 새로운
-            배경으로 전환됩니다.
+          <h3>
+            <span data-lang="ko">30+ 판타지 배경</span>
+            <span data-lang="en">30+ Fantasy Backgrounds</span>
+          </h3>
+          <p data-lang="ko">
+            숲, 사막, 던전, 설원, 화산 등 30여 종의 다양한 판타지 배경이
+            웨이브 진행에 따라 전환됩니다. 끝없는 비주얼.
+          </p>
+          <p data-lang="en">
+            Forest, desert, dungeon, snowfield, volcano, and more — 30+ fantasy
+            backgrounds transition as you progress. Endless visuals.
           </p>
         </div>
       </div>
@@ -134,35 +226,26 @@
   <!-- ─────────── Download ─────────── -->
   <section id="download">
     <div class="container" style="text-align: center">
-      <h2 class="section-title">다운로드</h2>
-      <p class="section-subtitle">
+      <h2 class="section-title">
+        <span data-lang="ko">다운로드</span>
+        <span data-lang="en">Download</span>
+      </h2>
+      <p class="section-subtitle" data-lang="ko">
         Stone TD는 현재 <strong>소프트 런칭 준비 중</strong>입니다.<br />
-        곧 원스토어를 통해 만나보실 수 있습니다.
+        곧 아래 스토어를 통해 만나보실 수 있습니다.
+      </p>
+      <p class="section-subtitle" data-lang="en">
+        Stone TD is currently in <strong>soft launch preparation</strong>.<br />
+        Coming soon to the stores below.
       </p>
       <div class="cta-buttons">
-        <a href="#" class="btn">📱 원스토어 (Coming Soon)</a>
+        <a href="#" class="btn">▶ Google Play</a>
+        <a href="#" class="btn">🏪 ONE Store</a>
         <a href="mailto:support@flamepunch.com" class="btn btn-secondary">
-          ✉️ 문의하기
+          <span data-lang="ko">✉️ 문의하기</span>
+          <span data-lang="en">✉️ Contact Us</span>
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- ─────────── English Brief ─────────── -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">About (English)</h2>
-      <p class="section-subtitle">
-        <strong>Stone TD</strong> is a castle defense + roguelite mobile game
-        developed by <strong>Flamepunch Studio</strong>. Defend your castle
-        across endless waves with 16 unique heroes, strategic deck building,
-        and roguelite buff selection.
-      </p>
-      <p class="section-subtitle">
-        The game uses Google Sign-In for cross-device progression and
-        leaderboard participation. For details on data handling, please see our
-        <a href="privacy.html" style="color: var(--accent)">Privacy Policy</a>.
-      </p>
     </div>
   </section>
 
@@ -170,15 +253,37 @@
   <footer>
     <div class="container">
       <ul class="footer-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="privacy.html">개인정보처리방침</a></li>
-        <li><a href="terms.html">이용약관</a></li>
-        <li><a href="mailto:support@flamepunch.com">문의</a></li>
+        <li>
+          <a href="index.html">
+            <span data-lang="ko">홈</span>
+            <span data-lang="en">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="privacy.html">
+            <span data-lang="ko">개인정보처리방침</span>
+            <span data-lang="en">Privacy Policy</span>
+          </a>
+        </li>
+        <li>
+          <a href="terms.html">
+            <span data-lang="ko">이용약관</span>
+            <span data-lang="en">Terms of Service</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:support@flamepunch.com">
+            <span data-lang="ko">문의</span>
+            <span data-lang="en">Contact</span>
+          </a>
+        </li>
       </ul>
       <p class="footer-copyright">
-        © 2026 Flamepunch Studio. All rights reserved.
+        © 2026 FlamePunch Studio. All rights reserved.
       </p>
     </div>
   </footer>
+
+  <script src="lang.js"></script>
 </body>
 </html>

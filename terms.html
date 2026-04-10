@@ -10,26 +10,46 @@
   />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="show-ko">
   <!-- ─────────── 헤더 ─────────── -->
   <header>
     <div class="container">
       <nav class="nav">
         <a href="index.html" class="logo">
-          <div class="logo-icon">⚔️</div>
+          <img src="Stone_TD_Icon.png" alt="Stone TD" class="logo-icon" />
           <span>Stone TD</span>
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">홈</a></li>
-          <li><a href="privacy.html">개인정보처리방침</a></li>
-          <li><a href="terms.html">이용약관</a></li>
+          <li>
+            <a href="index.html">
+              <span data-lang="ko">홈</span>
+              <span data-lang="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy.html">
+              <span data-lang="ko">개인정보처리방침</span>
+              <span data-lang="en">Privacy</span>
+            </a>
+          </li>
+          <li>
+            <a href="terms.html">
+              <span data-lang="ko">이용약관</span>
+              <span data-lang="en">Terms</span>
+            </a>
+          </li>
+          <li>
+            <button class="lang-switch" type="button">🌐 English</button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ─────────── 한국어 섹션 ─────────── -->
+  <!-- ─────────── 법적 문서 컨테이너 ─────────── -->
   <main class="legal-container">
+    <!-- ─────────── 한국어 섹션 ─────────── -->
+    <div data-lang="ko">
     <h1>서비스 이용약관</h1>
     <p class="legal-subtitle">
       최종 수정일: 2026년 4월 10일 &nbsp;|&nbsp; 발효일: 2026년 4월 10일
@@ -37,7 +57,7 @@
 
     <h2>제1조 (목적)</h2>
     <p>
-      본 약관은 <strong>Flamepunch Studio</strong> (이하 "회사")가 제공하는
+      본 약관은 <strong>FlamePunch Studio</strong> (이하 "회사")가 제공하는
       모바일 게임 <strong>Stone TD</strong> (이하 "서비스")의 이용과 관련하여
       회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을
       목적으로 합니다.
@@ -240,7 +260,7 @@
     <h2>제12조 (연락처)</h2>
     <p>서비스 이용과 관련한 문의사항은 아래로 연락주시기 바랍니다.</p>
     <ul>
-      <li><strong>개발사</strong>: Flamepunch Studio</li>
+      <li><strong>개발사</strong>: FlamePunch Studio</li>
       <li>
         <strong>이메일</strong>:
         <a href="mailto:support@flamepunch.com"
@@ -252,20 +272,20 @@
     <p style="margin-top: 32px; color: var(--text-muted); font-size: 13px">
       ※ 본 약관은 한국어 원본이 우선 적용됩니다. 영문 번역본은 참고용입니다.
     </p>
+    </div>
+    <!-- ─────────── /한국어 섹션 ─────────── -->
 
     <!-- ─────────── English Section ─────────── -->
-    <div class="lang-section" style="margin-top: 60px">
-      <span class="lang-label">English</span>
-
-      <h1 style="font-size: 28px; margin-bottom: 8px">Terms of Service</h1>
-      <p class="legal-subtitle" style="margin-bottom: 24px">
+    <div data-lang="en">
+      <h1>Terms of Service</h1>
+      <p class="legal-subtitle">
         Last updated: April 10, 2026 &nbsp;|&nbsp; Effective: April 10, 2026
       </p>
 
       <h2>1. Acceptance of Terms</h2>
       <p>
         By accessing or using <strong>Stone TD</strong> (the "Service")
-        provided by <strong>Flamepunch Studio</strong> ("we", "us"), you agree
+        provided by <strong>FlamePunch Studio</strong> ("we", "us"), you agree
         to be bound by these Terms of Service. If you do not agree to these
         terms, please do not use the Service.
       </p>
@@ -327,7 +347,7 @@
       <h2>6. Intellectual Property</h2>
       <p>
         All content within the Service (including but not limited to graphics,
-        music, text, characters) is owned by Flamepunch Studio or its
+        music, text, characters) is owned by FlamePunch Studio or its
         licensors. You may not reproduce, distribute, or create derivative
         works without prior written consent.
       </p>
@@ -352,7 +372,7 @@
 
       <h2>9. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by law, Flamepunch Studio shall not be
+        To the maximum extent permitted by law, FlamePunch Studio shall not be
         liable for any indirect, incidental, special, or consequential damages
         arising from your use of the Service.
       </p>
@@ -369,7 +389,7 @@
         For questions about these Terms, please contact us:
       </p>
       <ul>
-        <li><strong>Developer</strong>: Flamepunch Studio</li>
+        <li><strong>Developer</strong>: FlamePunch Studio</li>
         <li>
           <strong>Email</strong>:
           <a href="mailto:support@flamepunch.com"
@@ -384,15 +404,37 @@
   <footer>
     <div class="container">
       <ul class="footer-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="privacy.html">개인정보처리방침</a></li>
-        <li><a href="terms.html">이용약관</a></li>
-        <li><a href="mailto:support@flamepunch.com">문의</a></li>
+        <li>
+          <a href="index.html">
+            <span data-lang="ko">홈</span>
+            <span data-lang="en">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="privacy.html">
+            <span data-lang="ko">개인정보처리방침</span>
+            <span data-lang="en">Privacy Policy</span>
+          </a>
+        </li>
+        <li>
+          <a href="terms.html">
+            <span data-lang="ko">이용약관</span>
+            <span data-lang="en">Terms of Service</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:support@flamepunch.com">
+            <span data-lang="ko">문의</span>
+            <span data-lang="en">Contact</span>
+          </a>
+        </li>
       </ul>
       <p class="footer-copyright">
-        © 2026 Flamepunch Studio. All rights reserved.
+        © 2026 FlamePunch Studio. All rights reserved.
       </p>
     </div>
   </footer>
+
+  <script src="lang.js"></script>
 </body>
 </html>

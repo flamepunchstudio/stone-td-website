@@ -10,33 +10,53 @@
   />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="show-ko">
   <!-- ─────────── 헤더 ─────────── -->
   <header>
     <div class="container">
       <nav class="nav">
         <a href="index.html" class="logo">
-          <div class="logo-icon">⚔️</div>
+          <img src="Stone_TD_Icon.png" alt="Stone TD" class="logo-icon" />
           <span>Stone TD</span>
         </a>
         <ul class="nav-links">
-          <li><a href="index.html">홈</a></li>
-          <li><a href="privacy.html">개인정보처리방침</a></li>
-          <li><a href="terms.html">이용약관</a></li>
+          <li>
+            <a href="index.html">
+              <span data-lang="ko">홈</span>
+              <span data-lang="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy.html">
+              <span data-lang="ko">개인정보처리방침</span>
+              <span data-lang="en">Privacy</span>
+            </a>
+          </li>
+          <li>
+            <a href="terms.html">
+              <span data-lang="ko">이용약관</span>
+              <span data-lang="en">Terms</span>
+            </a>
+          </li>
+          <li>
+            <button class="lang-switch" type="button">🌐 English</button>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ─────────── 한국어 섹션 ─────────── -->
+  <!-- ─────────── 법적 문서 컨테이너 ─────────── -->
   <main class="legal-container">
+    <!-- ─────────── 한국어 섹션 ─────────── -->
+    <div data-lang="ko">
     <h1>개인정보처리방침</h1>
     <p class="legal-subtitle">
       최종 수정일: 2026년 4월 10일 &nbsp;|&nbsp; 발효일: 2026년 4월 10일
     </p>
 
     <p>
-      <strong>Flamepunch Studio</strong> (이하 "회사")가 개발 및 운영하는 모바일
+      <strong>FlamePunch Studio</strong> (이하 "회사")가 개발 및 운영하는 모바일
       게임 <strong>Stone TD</strong> (이하 "서비스")는 이용자의 개인정보를
       소중히 여기며, 「개인정보 보호법」 및 관련 법령을 준수하여 안전하게
       처리합니다. 본 개인정보처리방침은 서비스가 수집하는 정보와 그 사용 목적,
@@ -253,7 +273,7 @@
       연락주시기 바랍니다.
     </p>
     <ul>
-      <li><strong>개발사</strong>: Flamepunch Studio</li>
+      <li><strong>개발사</strong>: FlamePunch Studio</li>
       <li>
         <strong>이메일</strong>:
         <a href="mailto:support@flamepunch.com"
@@ -266,18 +286,18 @@
       ※ 본 개인정보처리방침은 한국어 원본이 우선 적용됩니다. 영문 번역본은
       참고용입니다.
     </p>
+    </div>
+    <!-- ─────────── /한국어 섹션 ─────────── -->
 
     <!-- ─────────── English Section ─────────── -->
-    <div class="lang-section" style="margin-top: 60px">
-      <span class="lang-label">English</span>
-
-      <h1 style="font-size: 28px; margin-bottom: 8px">Privacy Policy</h1>
-      <p class="legal-subtitle" style="margin-bottom: 24px">
+    <div data-lang="en">
+      <h1>Privacy Policy</h1>
+      <p class="legal-subtitle">
         Last updated: April 10, 2026 &nbsp;|&nbsp; Effective: April 10, 2026
       </p>
 
       <p>
-        <strong>Flamepunch Studio</strong> ("we", "us", or "our") operates the
+        <strong>FlamePunch Studio</strong> ("we", "us", or "our") operates the
         mobile game <strong>Stone TD</strong> (the "Service"). This Privacy
         Policy informs you of our policies regarding the collection, use, and
         disclosure of personal data when you use our Service.
@@ -387,7 +407,7 @@
         If you have any questions about this Privacy Policy, please contact us:
       </p>
       <ul>
-        <li><strong>Developer</strong>: Flamepunch Studio</li>
+        <li><strong>Developer</strong>: FlamePunch Studio</li>
         <li>
           <strong>Email</strong>:
           <a href="mailto:support@flamepunch.com"
@@ -402,15 +422,37 @@
   <footer>
     <div class="container">
       <ul class="footer-links">
-        <li><a href="index.html">홈</a></li>
-        <li><a href="privacy.html">개인정보처리방침</a></li>
-        <li><a href="terms.html">이용약관</a></li>
-        <li><a href="mailto:support@flamepunch.com">문의</a></li>
+        <li>
+          <a href="index.html">
+            <span data-lang="ko">홈</span>
+            <span data-lang="en">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="privacy.html">
+            <span data-lang="ko">개인정보처리방침</span>
+            <span data-lang="en">Privacy Policy</span>
+          </a>
+        </li>
+        <li>
+          <a href="terms.html">
+            <span data-lang="ko">이용약관</span>
+            <span data-lang="en">Terms of Service</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:support@flamepunch.com">
+            <span data-lang="ko">문의</span>
+            <span data-lang="en">Contact</span>
+          </a>
+        </li>
       </ul>
       <p class="footer-copyright">
-        © 2026 Flamepunch Studio. All rights reserved.
+        © 2026 FlamePunch Studio. All rights reserved.
       </p>
     </div>
   </footer>
+
+  <script src="lang.js"></script>
 </body>
 </html>
