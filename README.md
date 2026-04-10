@@ -98,7 +98,7 @@ git push
 - [ ] `privacy.html`: 발효일 / 최종 수정일 확인
 - [ ] `terms.html`: 발효일 / 최종 수정일 확인
 - [ ] `index.html`: 게임 설명이 정확한지 검토
-- [ ] 모든 파일: `support@flamepunchstudio.com` 이메일 주소 확인
+- [ ] 모든 파일: `support@flamepunch.com` 이메일 주소 확인
 - [ ] 스크린샷 추가 (선택): `index.html`의 Hero 섹션에 게임 스크린샷 3~5장
 
 ### 원스토어 런칭 직전
@@ -126,7 +126,7 @@ git push
 ## 📞 문의
 
 - **Developer**: Flamepunch Studio
-- **Email**: support@flamepunchstudio.com
+- **Email**: support@flamepunch.com
 - **Game**: Stone TD (Castle Defense + Roguelite)
 
 ---
