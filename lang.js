@@ -18,37 +18,46 @@
   // data-title-ko, data-title-en 속성으로 <body>에 설정해도 됨
   var titles = {
     index: {
-      ko: "Stone TD — 타워 디펜스 로그라이트 모바일 게임",
-      en: "Stone TD — Tower Defense Roguelite Mobile Game",
+      ko: "스톤 타워 디펜스: 영웅의 증명",
+      en: "Stone TD: Proof of Heroes",
     },
     privacy: {
-      ko: "개인정보처리방침 — Stone TD",
-      en: "Privacy Policy — Stone TD",
+      ko: "개인정보처리방침 — 스톤 타워 디펜스: 영웅의 증명",
+      en: "Privacy Policy — Stone TD: Proof of Heroes",
     },
     terms: {
-      ko: "이용약관 — Stone TD",
-      en: "Terms of Service — Stone TD",
+      ko: "이용약관 — 스톤 타워 디펜스: 영웅의 증명",
+      en: "Terms of Service — Stone TD: Proof of Heroes",
+    },
+    delete: {
+      ko: "계정 및 데이터 삭제 — 스톤 타워 디펜스: 영웅의 증명",
+      en: "Account & Data Deletion — Stone TD: Proof of Heroes",
     },
   };
 
   var descriptions = {
     index: {
-      ko: "Stone TD는 성을 지키는 타워 디펜스 + 로그라이트 모바일 게임입니다. 16명의 영웅과 끝없는 웨이브에 맞서보세요.",
-      en: "Stone TD is a tower defense + roguelite mobile game where you defend your castle. Challenge endless waves with 16 unique heroes.",
+      ko: "스톤 타워 디펜스: 영웅의 증명 — 성을 지키는 타워 디펜스 + 로그라이트 모바일 게임. 16명의 영웅과 끝없는 웨이브에 맞서보세요.",
+      en: "Stone TD: Proof of Heroes — Tower defense + roguelite mobile game where you defend your castle. Challenge endless waves with 16 unique heroes.",
     },
     privacy: {
-      ko: "Stone TD 개인정보처리방침 — 수집하는 정보, 사용 목적, 보관 기간, 사용자 권리에 대한 안내",
-      en: "Stone TD Privacy Policy — Information we collect, purposes, retention, and user rights",
+      ko: "스톤 타워 디펜스: 영웅의 증명 개인정보처리방침 — 수집하는 정보, 사용 목적, 보관 기간, 사용자 권리에 대한 안내",
+      en: "Stone TD: Proof of Heroes Privacy Policy — Information we collect, purposes, retention, and user rights",
     },
     terms: {
-      ko: "Stone TD 서비스 이용약관 — 서비스 이용 조건, 이용자의 권리와 의무",
-      en: "Stone TD Terms of Service — Terms of use, user rights and obligations",
+      ko: "스톤 타워 디펜스: 영웅의 증명 서비스 이용약관 — 서비스 이용 조건, 이용자의 권리와 의무",
+      en: "Stone TD: Proof of Heroes Terms of Service — Terms of use, user rights and obligations",
+    },
+    delete: {
+      ko: "스톤 타워 디펜스: 영웅의 증명 계정 삭제 안내 — 인앱 삭제 절차, 이메일 요청 방법, 삭제 및 보관되는 데이터 유형, 처리 기간",
+      en: "Stone TD: Proof of Heroes Account Deletion Guide — In-app deletion steps, email request, data types deleted/retained, processing period",
     },
   };
 
   /** 현재 페이지 식별 (파일명 기반) */
   function getPageId() {
     var path = window.location.pathname;
+    if (path.indexOf("delete-account") !== -1) return "delete";
     if (path.indexOf("privacy") !== -1) return "privacy";
     if (path.indexOf("terms") !== -1) return "terms";
     return "index";
